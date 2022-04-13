@@ -1,0 +1,26 @@
+{
+  "technologies": [
+    {
+      "id": "react",
+      "title": "React"
+    },
+    {
+      "id": "angular",
+      "title": "Angular"
+    },
+    {
+      "id": "vue",
+      "title": "Vue"
+    },
+    {
+      "id": "ember",
+      "title": "Ember"
+    }
+  ],
+  "colors": [
+    { "title": "red" },
+    { "title": "yellow" },
+    { "title": "green" },
+    { "title": "blue" }
+  ]
+}
