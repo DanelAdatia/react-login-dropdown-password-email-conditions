@@ -10,21 +10,21 @@ const SignIn = () => {
 
   const HandlePassword = (event) => {
     setPassword(event.target.value);
+    CheckPasswords(event.target.value);
   };
 
-  const CheckPassword = () => {
-    for (let i = 0; i < password.length; i++) {
-      setPasswordCheck(parseInt(password.charAt(i)) + passwordCheck);
-      console.log(parseInt(password.charAt(i)));
-    }
+ const CheckPasswords = (inputValue) => {
+    let myArr = String(inputValue)
+      .split("")
+      .reduce((prevValue, curvalue) => {
+        return Number(prevValue) + Number(curvalue);
+      });
+    setPasswordCheck(myArr);
   };
-
-  useEffect(() => {
-    CheckPassword();
-    console.log(passwordCheck, "p");
-  }, [password]);
 
   const handleSignin = () => {
+     CheckPasswords();
+    console.log(passwordCheck);
     setCount(count + 1);
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/.test(email) === false) {
       window.alert("Email is not in correct");
